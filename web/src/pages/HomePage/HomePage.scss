@@ -1,9 +1,13 @@
 .welcome-page-wrapper{
   width: 100vw;
   height: 100vh;
-  .welcome-title{
-    align-items: center;
+  .welcome-content{
+    height: 100vh;
     display: flex;
-    justify-content: center;
+    .welcome-title{
+      height: fit-content;
+      margin: auto 0px;
+    }
   }
+
 }
