@@ -1,5 +1,6 @@
-import { Link, routes } from '@redwoodjs/router'
+// import { Link, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
+
 import './HomePAge.scss'
 const HomePage = () => {
   return (
