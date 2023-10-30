@@ -4,21 +4,31 @@ import { FatalErrorBoundary, RedwoodProvider } from '@redwoodjs/web'
 import { RedwoodApolloProvider } from '@redwoodjs/web/apollo'
 
 import FatalErrorPage from 'src/pages/FatalErrorPage'
+import { useState } from "react";
 import Routes from 'src/Routes'
-import { theme } from 'src/theme'
-
+// import { theme } from 'src/theme'
 import './index.css'
+import NavBarLayout from './layouts/NavBarLayout/NavBarLayout'
 
-const App = () => (
-  <ThemeUIProvider theme={theme}>
-    <FatalErrorBoundary page={FatalErrorPage}>
-      <RedwoodProvider titleTemplate="%PageTitle | %AppTitle">
-        <RedwoodApolloProvider>
-          <Routes />
-        </RedwoodApolloProvider>
-      </RedwoodProvider>
-    </FatalErrorBoundary>
-  </ThemeUIProvider>
-)
+const App = () => {
+  const [darkMode, setDarkMode] = useState(false);
+  const propThemeModeToApp = (event) => {
+      setDarkMode(event);
+  }
+  // <ThemeUIProvider theme={theme}>
+  return (
+    <div className={darkMode ? "" : "dark"}>
+      <FatalErrorBoundary page={FatalErrorPage}>
+        <RedwoodProvider titleTemplate="%PageTitle | %AppTitle">
+          <RedwoodApolloProvider>
+            <NavBarLayout propThemeModeToApp={propThemeModeToApp} />
+            <Routes />
+          </RedwoodApolloProvider>
+        </RedwoodProvider>
+      </FatalErrorBoundary>
+    </div>
+  )
+  // </ThemeUIProvider>
+  }
 
 export default App

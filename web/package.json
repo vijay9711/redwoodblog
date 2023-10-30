@@ -11,16 +11,23 @@
     ]
   },
   "dependencies": {
-    "@redwoodjs/forms": "6.3.1",
-    "@redwoodjs/router": "6.3.1",
-    "@redwoodjs/web": "6.3.1",
-    "bootstrap": "^5.3.2",
+    "@redwoodjs/forms": "6.3.2",
+    "@redwoodjs/router": "6.3.2",
+    "@redwoodjs/web": "6.3.2",
     "prop-types": "15.8.1",
     "react": "18.2.0",
-    "react-bootstrap": "^2.9.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@redwoodjs/vite": "6.3.1"
+    "@redwoodjs/vite": "6.3.2",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.4"
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "rules": {
+      "jsx-a11y/anchor-is-valid": "off"
+    }
   }
 }
