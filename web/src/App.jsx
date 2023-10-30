@@ -11,7 +11,7 @@ import './index.css'
 import NavBarLayout from './layouts/NavBarLayout/NavBarLayout'
 
 const App = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState();
   const propThemeModeToApp = (event) => {
       setDarkMode(event);
   }
