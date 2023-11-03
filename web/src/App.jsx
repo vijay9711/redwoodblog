@@ -17,12 +17,14 @@ const App = () => {
   }
   // <ThemeUIProvider theme={theme}>
   return (
-    <div className={darkMode ? "" : "dark"}>
+    <div className={darkMode ? "dark" : ""}>
       <FatalErrorBoundary page={FatalErrorPage}>
         <RedwoodProvider titleTemplate="%PageTitle | %AppTitle">
           <RedwoodApolloProvider>
             <NavBarLayout propThemeModeToApp={propThemeModeToApp} />
-            <Routes />
+            {/* <div className='mt-[4.5rem]'> */}
+              <Routes />
+            {/* </div> */}
           </RedwoodApolloProvider>
         </RedwoodProvider>
       </FatalErrorBoundary>

@@ -5,7 +5,7 @@ import { useState } from "react";
 
 
 const ThemeButton = ({setModeToNav}) => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const handleDarkMode = () => {
     setDarkMode(!darkMode);
     setModeToNav(darkMode);
